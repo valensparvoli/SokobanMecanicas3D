@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IzquierdaScript : MonoBehaviour
+public class ArribaBox : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Wall"))
+        if (other.CompareTag("Player"))
         {
-            Player.movimientoIzquierda = false;
+            BoxScript.puedeBajar = true;
+
         }
+
     }
     private void OnTriggerExit(Collider other)
     {
-        Player.movimientoIzquierda = true;
+        
+
     }
+
 }

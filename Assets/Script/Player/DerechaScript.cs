@@ -10,10 +10,15 @@ public class DerechaScript : MonoBehaviour
         {
             Player.movimientoDerecha = false;
         }
+        if (other.CompareTag("Box"))
+        {
+            BoxScript.BoxDerecha = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         Player.movimientoDerecha = true;
+        BoxScript.BoxDerecha = false;
     }
 
 

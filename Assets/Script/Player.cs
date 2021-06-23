@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject derecha;
-    public GameObject izquierda;
-    public GameObject arriba;
-    public GameObject abajo;
 
     public static bool movimientoArriba=true;
     public static bool movimientoAbajo = true;
@@ -50,6 +46,8 @@ public class Player : MonoBehaviour
                 transform.Translate(-1, 0, 0);
             }
         }
+
+
     }
 
 }

@@ -10,10 +10,15 @@ public class AbajoScript : MonoBehaviour
         {
             Player.movimientoAbajo = false;
         }
+        if (other.CompareTag("Box"))
+        {
+            BoxScript.BoxAbajo = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         Player.movimientoAbajo = true;
+        BoxScript.BoxAbajo = false;
     }
 
 
