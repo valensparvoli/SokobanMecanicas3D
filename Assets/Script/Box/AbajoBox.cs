@@ -8,7 +8,9 @@ public class AbajoBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Subi porfa");
             BoxScript.puedeSubir = true;
+            
         }
 
     }

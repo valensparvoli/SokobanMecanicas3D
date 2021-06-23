@@ -8,13 +8,13 @@ public class ArribaScript : MonoBehaviour
     {
         if (other.CompareTag("Wall"))
         {
-            Player.movimientoAbajo = false;
+            Player.movimientoArriba = false;
         }
        
     }
     private void OnTriggerExit(Collider other)
     {
-        Player.movimientoAbajo = true;
+        Player.movimientoArriba = true;
         
     }
 

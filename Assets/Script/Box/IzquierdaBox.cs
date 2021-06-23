@@ -8,13 +8,17 @@ public class IzquierdaBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
             BoxScript.puedeDerecha = true;
         }
-
+        if (other.CompareTag("Wall"))
+        {
+            Debug.Log("No seguir");
+        }
+       
     }
     private void OnTriggerExit(Collider other)
     {
-
+       
     }
+
 }

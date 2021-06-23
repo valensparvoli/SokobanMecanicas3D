@@ -16,6 +16,8 @@ public class BoxScript : MonoBehaviour
 
     public static bool Movimiento = true;
 
+    public bool movimientoArriba = false;
+
     private void FixedUpdate()
     {
         
@@ -50,9 +52,11 @@ public class BoxScript : MonoBehaviour
             {
                 if (puedeSubir == true)
                 {
-                    transform.Translate(0, 0, 1);
+                    Debug.Log("Subiendo");
+                    transform.Translate(0,0,1);
                 }
             }
         }
+       
     }
 }

@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public static bool movimientoAbajo = true;
     public static bool movimientoDerecha = true;
     public static bool movimientoIzquierda= true;
+
+    public static bool movimientoSiNo = true;
     void Start()
     {
         
@@ -17,36 +19,40 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (movimientoArriba == true)
+        if (movimientoSiNo == true)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (movimientoArriba == true)
             {
-                transform.Translate(0, 0, 1);
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    transform.Translate(0, 0, 1);
+                }
             }
-        }
-        if (movimientoAbajo == true)
-        {
-            if (Input.GetKeyDown(KeyCode.S))
+            if (movimientoAbajo == true)
             {
-                transform.Translate(0, 0, -1);
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    transform.Translate(0, 0, -1);
+                }
             }
-        }
-        if (movimientoDerecha == true)
-        {
-            if (Input.GetKeyDown(KeyCode.D))
+            if (movimientoDerecha == true)
             {
-                transform.Translate(1, 0, 0);
-            }
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    transform.Translate(1, 0, 0);
+                    
+                }
 
             }
-        if (movimientoIzquierda==true)
-        {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (movimientoIzquierda == true)
             {
-                transform.Translate(-1, 0, 0);
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    transform.Translate(-1, 0, 0);
+                }
             }
-        }
 
+        }
 
     }
 
